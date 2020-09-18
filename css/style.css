@@ -1,0 +1,408 @@
+        /* Base Styles */
+        
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        h1,
+        h2 {
+            font-weight: 300;
+            line-height: 1.2;
+        }
+        
+        p {
+            margin: 10px 0;
+        }
+        
+        img {
+            width: 100%;
+        }
+        /* topcontainer */
+        
+        .topaddress {
+            display: flex;
+            /* flex-direction: column; */
+            align-items: center;
+            justify-content: center;
+            height: 25px;
+            line-height: 0.8;
+            padding: 5px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+        }
+        
+        .topaddress>* {
+            margin-right: 15px;
+            /*to separate the words out for all the elements like p, span, a etc*/
+        }
+        
+        .topaddress a:hover {
+            color: #f8b24f;
+        }
+        /* Navbar */
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333333;
+            color: #ffffff;
+            opacity: 0.8;
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            top: 20px;
+            padding: 0 30px;
+        }
+        
+        .navbar a {
+            color: #ffffff;
+            padding: 10px 20px;
+            /*to separate a links */
+            margin: 0 5px;
+        }
+        
+        .navbar a:hover {
+            color: #f8b24f;
+            border-bottom: #f8b24f 2px solid;
+        }
+        
+        .navbar ul {
+            display: flex;
+        }
+        
+        .navbar .logo {
+            font-weight: 400;
+        }
+        /* Showcase */
+        
+        .showcase {
+            background: url('../img/HoustonShowcase.jpg') no-repeat center center/cover;
+            height: 100vh;
+            /*to fill entire viewport from 0-100vh */
+            position: relative;
+            /*parent div is relative, child div is absolute */
+            color: #ffffff;
+        }
+        
+        .showcase .content {
+            /*standard flexbox settings for styling*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            /*align items & justify content needs height to center*/
+            padding: 0 20px;
+            /*so wont rub off smaller screens*/
+        }
+        
+        .showcase .content h1 {
+            font-size: 3.4375rem;
+        }
+        
+        .showcase .content p {
+            font-size: 1.4375rem;
+            max-width: 600px;
+            /*so paragraph wont completely fill the width*/
+            margin: 10px 0px;
+            /*10 top & bottom, 0 left & right, */
+        }
+        
+        .showcase .content .btn {
+            margin-top: 10px;
+        }
+        /* for creating the dark overlay. can also after to insert overlay infront of the image */
+        
+        .showcase::before {
+            content: '';
+            position: absolute;
+            /*for child div of parent which is absolute*/
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        /* the z index is used to move image closer to screen like to create the dark overlay with the image and content in front of the image. the higher the Z-index the closer the image to you and screen. The * is used to bring everything in showcase to front or is considered all */
+        
+        .showcase * {
+            z-index: 10;
+        }
+        /* Services */
+        
+        .services {
+            padding: 30px;
+        }
+        
+        .services h3 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .services i {
+            background-color: #f8b24f;
+            padding: 10px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        
+        .membtns {
+            display: flex;
+            justify-content: space-around;
+            justify-items: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        /*Flex-items About & Testimonials*/
+        
+        .flex-items .btn {
+            cursor: pointer;
+            display: inline-block;
+            padding: 8px 15px;
+            color: black;
+            background-color: #f8b24f;
+            border: none;
+            border-radius: 5px;
+            /* margin-top: 10px; */
+        }
+        
+        .flex-items .btn:hover {
+            opacity: 0.9;
+            border: 1px solid;
+            background-color: #ff9a3c;
+            color: #333333;
+        }
+        
+        .flex-items .button {
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: flex-end;
+            align-content: center;
+            height: 100%;
+            text-align: center;
+        }
+        
+        .flex-columns.flex-reverse .row {
+            flex-direction: row-reverse;
+        }
+        /* flex items team */
+        
+        .members {
+            display: flex;
+            justify-items: center;
+            justify-content: center;
+            align-items: flex-start;
+            align-content: center;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .members>div {
+            padding: 5px;
+        }
+        
+        .members img {
+            width: 300px;
+            border-radius: 5%;
+        }
+        /* contact form */
+        
+        .contact h2 {
+            text-align: center;
+        }
+        
+        .contact iframe {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .contact .flex-columns .row {
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 1;
+        }
+        
+        .contact .flex-columns .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 1;
+            padding: 30px;
+            height: 100%;
+        }
+        
+        .contact .column-2 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 1;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 20px;
+        }
+        
+        .callback-form {
+            width: 100%;
+            padding: 20px 0;
+        }
+        
+        .callback-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .callback-form .form-control {
+            margin-bottom: 15px;
+        }
+        
+        .callback-form input {
+            width: 100%;
+            padding: 4px;
+            height: 40px;
+            border: #f5f5f5 1px solid;
+        }
+        
+        .callback-form .comments {
+            width: 100%;
+            height: 100px;
+        }
+        
+        .callback-form .btn {
+            padding: 12px 0;
+        }
+        /* Footer */
+        
+        .footer {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .footer i {
+            padding: 10px;
+        }
+        
+        .footer i:hover {
+            color: #f8b24f;
+        }
+        /* About */
+        /* Mobile */
+        /*for screen size of 767px or less */
+        
+        @media(max-width:767px) {
+            .topaddress {
+                font-size: 12px;
+                flex-direction: column;
+                height: 39px;
+                padding-top: 0px;
+            }
+            .topaddress p {
+                margin-top: 0px;
+            }
+            .topaddress i {
+                display: none;
+            }
+            .navbar {
+                flex-direction: column;
+                top: 39px;
+                height: 75px;
+                padding: 0px;
+            }
+            .navbar a {
+                font-size: small;
+                padding: 3px 5px;
+                margin: 0 2px;
+                line-height: 1.3;
+            }
+            .services {
+                padding: 5px;
+            }
+            .services h2 {
+                font-size: 35px;
+                margin-top: 5px;
+                margin-bottom: 8px;
+            }
+            .members {
+                flex-direction: column;
+            }
+            .members i {
+                margin-top: 5px;
+            }
+            .membtns {
+                flex-direction: column;
+            }
+            .flex-columns .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+            .flex-columns .column-2 {
+                padding: 10px;
+            }
+            .team img {
+                height: 70%;
+                width: 70%;
+            }
+            .team .section-header {
+                padding-top: 5px;
+            }
+            .contact iframe {
+                height: 400px;
+            }
+            .showcase .content p {
+                font-size: 1rem;
+            }
+            .showcase .content h1 {
+                font-size: 40px;
+            }
+            .aboutus img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        /*for screen sizes of between 768px and 1024px */
+        
+        @media(max-width:1024px) and (min-width:768px) {
+            .members img {
+                max-width: 100%;
+            }
+            .navbar {
+                padding: 10px;
+            }
+            .navbar a {
+                padding: 5px 5px;
+            }
+        }

@@ -1,0 +1,154 @@
+/* Text styles and colors */
+
+.text-gold {
+    color: #f8b24f;
+}
+
+.text-dark {
+    color: black;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-lightyellow {
+    color: #dfd3c3;
+}
+
+.bg-dark {
+    background-color: #333333;
+}
+
+.bg-gold {
+    background-color: #f8b24f;
+}
+
+
+/* button */
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 30px;
+    color: #ffffff;
+    background-color: #f8b24f;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-dark {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.btn-light {
+    background-color: #f4f4f4;
+    color: white;
+}
+
+.btn-dark:hover {
+    opacity: 0.9;
+    border: 1px solid #333333;
+}
+
+
+/* heading & h2  */
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.heading-h2 {
+    font-size: 3.125rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    /* background-color: #f8b24f; */
+}
+
+
+/* section */
+
+.section-header {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.section-padding {
+    padding: 20px 20px 40px;
+}
+
+.section-header h2 {
+    font-size: 40px;
+    margin: 20px;
+}
+
+
+/* Flex columns */
+
+.flex-columns .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.flex-columns .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    /*width*/
+    flex: 1;
+    /*so it takes the entire height or 100% height*/
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2 {
+    height: 100%;
+}
+
+.flex-columns img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*done to make image fit the container while it is not being stretched out*/
+}
+
+.flex-columns .column-2 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.flex-columns h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.flex-columns p {
+    margin: 20px 0;
+}
+
+.footer-yellow {
+    background-color: #f8b24f;
+}
+
+.blacki .social i:hover {
+    color: #333333;
+}
